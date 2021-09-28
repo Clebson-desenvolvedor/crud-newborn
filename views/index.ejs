@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+</head>
+<body>
+    <h2>Controle de Clientes Newborn - Alice</h2>
+
+    <p>Dados gerais</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome da mamãe</th>
+                <th>Nome do bebê</th>
+                <th>Data de nascimento</th>
+                <th>Sexo</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(function(d){ %>
+                <tr>
+                    <td><%=d.id%></td>
+                    <td><%=d.nome_mae%></td>
+                    <td><%=d.nome_bebe%></td>
+                    <td><%=d.data_nasc%></td>
+                    <td><%=d.sexo%></td>
+                    <td>
+                        <a href="edit/<%=d.id%>" class="btn">Editar</a>
+                        <a href="del/<%=d.id%>" class="btn">Apagar</a>
+                    </td>
+
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
