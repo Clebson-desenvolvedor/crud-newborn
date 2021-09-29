@@ -3,7 +3,7 @@ const conn = require('./../db')
 const router = express.Router()
 
 router.get('/', function(req, res){
-    let query = `select * from clientes;`  
+    let query = `select * from clientes limit 5;`  
     conn.query(query, function(err, result){
         if(err) console.log(err)
         res.render('index', {
