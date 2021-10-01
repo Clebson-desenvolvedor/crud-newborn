@@ -16,7 +16,7 @@ body{
 #h-menu ul li{
     display: inline;
     float: right;
-    background-color: #009879;
+    background-color: #836FFF;
     margin-left: 10px;
     border-radius: 5px
 }
@@ -30,24 +30,23 @@ body{
 }
 
 #h-menu ul li a:hover{
-    background-color: #2bc7a8;
+    background-color: #b0a4fb;
+    border-radius: 5px;
 }
 
 .content-table{
     position: absolute;
     border-collapse: collapse;
     margin: 25px 0;
-    font-size: 0.9em;
+    font-size: 1.1em;
     min-width: 400px;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0,0,0,0.15);
-    font-size: 20px;
-
 }
 
 .content-table thead tr{
-    background-color: #009879;
+    background-color: #836FFF;
     color: #fff;
     text-align: left;
     font-weight: bold;
@@ -67,10 +66,18 @@ body{
 }
 
 .content-table tbody tr:last-of-type{
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #836FFF;
 }
 
 .div-table{
     display: flex;
     justify-content: center;
+}
+
+.btn-view{
+    background-color: #149525;
+    color: #fff;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
 }
