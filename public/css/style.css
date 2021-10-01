@@ -2,6 +2,11 @@ body{
     font-family: sans-serif;
 }
 
+h1{
+    color:#836FFF;
+    text-align: center;
+}
+
 .content{
 }
 
@@ -48,7 +53,7 @@ body{
 .content-table thead tr{
     background-color: #836FFF;
     color: #fff;
-    text-align: left;
+    text-align: center;
     font-weight: bold;
 }
 
@@ -74,10 +79,22 @@ body{
     justify-content: center;
 }
 
-.btn-view{
-    background-color: #149525;
+.btn{ 
     color: #fff;
     padding: 7px 10px;
     border-radius: 5px;
     font-size: 0.8em;
+    text-decoration: none;
+}
+
+.btn-view{
+    background-color: #36a016;
+}
+
+.btn-edit{
+    background-color: #b8c500;
+}
+
+.btn-del{
+    background-color: #d00;
 }
