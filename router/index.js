@@ -15,4 +15,10 @@ router.get('/', function(req, res){
     })
 })
 
+router.get('/add', function(req, res){
+    res.render('add', {
+        title: 'Newborn - Criar contato'
+    })
+})
+
 module.exports = router

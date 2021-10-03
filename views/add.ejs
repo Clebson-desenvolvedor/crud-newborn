@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="content">
+        <h1>Adicionando novo Contato</h1>
+        <div class="form">
+            <form action="/save" method="POST">
+                <label for="">Nome Completo da mãe</label>
+                <input type="text" placeholder="Nome" class="name">
+                <input type="text" placeholder="Sobrenome" class="name">
+                <label for="">WhatsApp</label>
+                <input type="text" placeholder="Whatsapp">
+                <label for="">Nome do bebê</label>
+                <input type="text" placeholder="Nome do bebê">
+                <label for="">Data de nascimento</label>
+                <input type="date" name="" id="">
+                <label for="">Sexo</label>
+                M <input type="radio" name="gender" checked>  
+                F <input type="radio" name="gender">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -120,3 +120,41 @@ h1{
 .btn-del:hover{
     background-color: #ff5c5c
 }
+
+form{
+    margin: 30px;
+}
+
+form input{
+    display: block;
+    margin: 5px 10px 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #4131ad;
+}
+
+form label{
+    display: block;
+    color:#836FFF;
+}
+
+form input[type=radio]{
+    display: inline;
+    padding: 0;
+}
+
+.name{
+    display: inline;
+    width: 200px;
+}
+
+.form{
+  width: 544px;
+  height: 500px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  border-radius: 15px;
+}
