@@ -21,4 +21,9 @@ router.get('/add', function(req, res){
     })
 })
 
+router.post('/save', function(req, res){
+    let data = {nome: req.body.nome}
+    res.send(data)
+})
+
 module.exports = router

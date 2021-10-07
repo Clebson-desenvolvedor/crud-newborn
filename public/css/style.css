@@ -17,8 +17,6 @@ h1{
 }
 
 #h-menu ul{
-   
-    
     list-style-type: none;
     padding: 0;
     position: relative;
@@ -46,7 +44,6 @@ h1{
 
 .content-table{
     position: absolute;
-    
     border-collapse: collapse;
     margin: 25px 0;
     font-size: 1.1em;
@@ -141,6 +138,13 @@ form label{
 form input[type=radio]{
     display: inline;
     padding: 0;
+}
+
+.btn-submit{
+    background-color: #836FFF;
+    border: none;
+    width: 50%;
+   margin: auto;
 }
 
 .name{
