@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Editar Cliente</h1>
+        <div class="form">
+            <form action="/updated" method="POST">
+                <input type="hidden" name="id" value="<%= cliente.id %>">
+                <label for="">Nome Completo da mãe</label>
+                <input type="text" placeholder="Nome" class="name" name="nome_mae" value="<%= cliente.nome_mae %>" required>
+                <input type="text" placeholder="Sobrenome" class="name" name="sobrenome" value="<%= cliente.sobrenome %>">
+                <label for="">WhatsApp</label>
+                <input type="text" placeholder="Whatsapp" name="whatsapp" value="<%= cliente.whatsapp %>">
+                <label for="">Nome do bebê</label>
+                <input type="text" placeholder="Nome do bebê" name="nome_bebe" value="<%= cliente.nome_bebe %>" required>
+                <label for="">Data de nascimento</label>
+                <input type="text" name="data_nasc" value="<%=moment(cliente.data_nasc).format('DD/MM/YYYY')%>" required>
+                <div class="radiobutons">
+                    <label for="">Sexo</label>
+                    <%sexo = cliente.sexo%>
+                        <% if(sexo=='M' ) { %>
+                            M <input type="radio" name="sexo" value="M" checked>
+                            F <input type="radio" name="sexo" value="F" >
+                        <% } else { %>
+                            M <input type="radio" name="sexo" value="M" >
+                            F <input type="radio" name="sexo" value="F" checked>
+                        <% } %>
+                </div>
+                <input type="submit" class="btn-submit" value="Enviar Dados"></input>
+                <a href="/" class="btn-cancel">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

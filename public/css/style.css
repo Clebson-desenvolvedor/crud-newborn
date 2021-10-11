@@ -94,6 +94,22 @@ h1{
     text-decoration: none;
 }
 
+.btn-cancel{
+    width: 20%; 
+    color: #fff;
+    padding: 7px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    text-decoration: none;
+    background-color: #d00;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+}
+
 .btn-view{
     background-color: #36a016;
 }
@@ -140,11 +156,26 @@ form input[type=radio]{
     padding: 0;
 }
 
-.btn-submit{
+form input[type=submit]{
     background-color: #836FFF;
-    border: none;
     width: 50%;
-   margin: auto;
+    color: #fff;
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 0.8em;
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    cursor: pointer;
+}
+
+form input[type=submit]:hover{
+    background-color: #a295fc;
 }
 
 .name{

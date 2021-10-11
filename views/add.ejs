@@ -13,18 +13,21 @@
         <div class="form">
             <form action="/save" method="POST">
                 <label for="">Nome Completo da mãe</label>
-                <input type="text" placeholder="Nome" class="name">
-                <input type="text" placeholder="Sobrenome" class="name">
+                <input type="text" placeholder="Nome" class="name" name="nome_mae">
+                <input type="text" placeholder="Sobrenome" class="name" name="sobrenome">
                 <label for="">WhatsApp</label>
-                <input type="text" placeholder="Whatsapp">
+                <input type="text" placeholder="Whatsapp" name="whatsapp">
                 <label for="">Nome do bebê</label>
-                <input type="text" placeholder="Nome do bebê">
+                <input type="text" placeholder="Nome do bebê" name="nome_bebe">
                 <label for="">Data de nascimento</label>
-                <input type="date" name="" id="">
-                <label for="">Sexo</label>
-                M <input type="radio" name="gender" checked>  
-                F <input type="radio" name="gender">
-                <input type="submit" class="btn-submit" value="Enviar Dados">
+                <input type="date" name="data_nasc">
+                <div class="radiobutons">
+                    <label for="">Sexo</label>
+                    M <input type="radio" name="sexo" value="M" checked>  
+                    F <input type="radio" name="sexo" value="F">
+                </div>
+                <input type="submit" class="btn-submit" value="Enviar Dados"></input>
+                <a href="/" class="btn-cancel">Cancelar</a>
             </form>
         </div>
     </div>
