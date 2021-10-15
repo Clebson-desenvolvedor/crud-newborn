@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title><%= title %></title>
+    <title>
+        <%= title %>
+    </title>
 </head>
+
 <body>
     <div class="content">
         <h1>Adicionando novo Contato</h1>
         <div class="form">
             <form action="/save" method="POST">
-                <label for="">Nome Completo da mãe</label>
-                <input type="text" placeholder="Nome" class="name" name="nome_mae">
+                <label for="nome_mae">Nome Completo da mãe</label>
+                <input type="text" id="nome_mae" placeholder="Nome" class="name" name="nome_mae">
                 <input type="text" placeholder="Sobrenome" class="name" name="sobrenome">
-                <label for="">WhatsApp</label>
-                <input type="text" placeholder="Whatsapp" name="whatsapp">
-                <label for="">Nome do bebê</label>
-                <input type="text" placeholder="Nome do bebê" name="nome_bebe">
-                <label for="">Data de nascimento</label>
-                <input type="date" name="data_nasc">
-                <div class="radiobutons">
-                    <label for="">Sexo</label>
-                    M <input type="radio" name="sexo" value="M" checked>  
-                    F <input type="radio" name="sexo" value="F">
+                <label for="whatsapp">WhatsApp</label>
+                <input type="text" id="whatsapp" placeholder="Whatsapp" name="whatsapp" maxlength="11">
+                <label for="nome_bebe">Nome do bebê</label>
+                <input type="text" id="nome_bebe" placeholder="Nome do bebê" name="nome_bebe">
+                <label for="data">Data de nascimento</label>
+                <input type="text" id="data" name="data_nasc" maxlength="10">
+                <p>Sexo</p>
+                <div class="rb">
+                     <label><input type="radio" name="sexo" value="M" checked>M</label>
+                     <label><input type="radio" name="sexo" value="F">F</label>
                 </div>
                 <input type="submit" class="btn-submit" value="Enviar Dados"></input>
                 <a href="/" class="btn-cancel">Cancelar</a>
@@ -32,4 +36,5 @@
         </div>
     </div>
 </body>
+
 </html>

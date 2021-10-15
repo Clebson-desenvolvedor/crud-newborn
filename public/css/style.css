@@ -7,8 +7,13 @@ h1{
     text-align: center;
 }
 
-.content{
-    
+.rb{
+    display: flex;
+    flex-direction: row;
+}
+
+.rb label{
+    margin-right: 20px;
 }
 
 #h-menu{
@@ -146,14 +151,13 @@ form input{
     border: 1px solid #4131ad;
 }
 
-form label{
+form label, p{
     display: block;
     color:#836FFF;
 }
 
 form input[type=radio]{
-    display: inline;
-    padding: 0;
+    display: inline-block;
 }
 
 form input[type=submit]{
