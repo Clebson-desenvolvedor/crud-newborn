@@ -22,7 +22,7 @@ router.get('/add', function (req, res) {
 })
 
 router.post('/save', function (req, res) {
-    let data_nasc = moment(req.body.data_nasc).format('YYYY-MM-DD')
+    let data_nasc = moment(req.body.data_nasc, 'DD/MM/YYYY').format('YYYY-MM-DD')
     let data = [
         req.body.nome_mae,
         req.body.sobrenome,
@@ -62,12 +62,10 @@ router.get('/edit/:id', function(req, res) {
 })
 
 router.post('/updated', function(req, res) {
-    let dataForm = moment(req.body.data_nasc)
+    let data_nasc = moment(req.body.data_nasc, 'DD/MM/YYYY').format('YYYY-MM-DD')
     let query = `update clientes set nome_mae = '${req.body.nome_mae}', sobrenome = '${req.body.sobrenome}',
-    whatsapp = '${req.body.whatsapp}', nome_bebe = '${req.body.nome_bebe}', data_nasc = '${req.body.data_nasc}',
+    whatsapp = '${req.body.whatsapp}', nome_bebe = '${req.body.nome_bebe}', data_nasc = '${data_nasc}',
     sexo = '${req.body.sexo}' where id = ${req.body.id}`
-    console.log('data_nasc: ', req.body.data_nasc)
-    console.log('dataForm: ', dataForm)
     conn.query(query, function(err, result) {
         if(err) console.log(err)
         res.redirect('/')

@@ -16,25 +16,27 @@
         <div class="form">
             <form action="/updated" method="POST">
                 <input type="hidden" name="id" value="<%= cliente.id %>">
-                <label for="">Nome Completo da mãe</label>
-                <input type="text" placeholder="Nome" class="name" name="nome_mae" value="<%= cliente.nome_mae %>" required>
-                <input type="text" placeholder="Sobrenome" class="name" name="sobrenome" value="<%= cliente.sobrenome %>">
-                <label for="">WhatsApp</label>
-                <input type="text" placeholder="Whatsapp" name="whatsapp" value="<%= cliente.whatsapp %>">
-                <label for="">Nome do bebê</label>
-                <input type="text" placeholder="Nome do bebê" name="nome_bebe" value="<%= cliente.nome_bebe %>" required>
-                <label for="">Data de nascimento</label>
-                <input type="text" name="data_nasc" value="<%=moment(cliente.data_nasc).format('DD/MM/YYYY')%>" required>
+                <label for="nome_mae">Nome Completo da mãe</label>
+                <input type="text" id="nome_mae" placeholder="Nome" class="name" name="nome_mae"value="<%= cliente.nome_mae %>" required>
+                <input type="text" placeholder="Sobrenome" class="name" name="sobrenome"value="<%= cliente.sobrenome %>">
+                <label for="whatsapp">WhatsApp</label>
+                <input type="text" id="whatsapp" placeholder="Whatsapp" name="whatsapp" value="<%= cliente.whatsapp %>" maxlength="11">
+                <label for="nome_bebe">Nome do bebê</label>
+                <input type="text" id="nome_bebe" placeholder="Nome do bebê" name="nome_bebe"value="<%= cliente.nome_bebe %>" required>
+                <label for="data_nasc">Data de nascimento</label>
+                <input type="text" id="data_nasc" name="data_nasc" value="<%=moment(cliente.data_nasc).format('DD/MM/YYYY')%>" required maxlength="10">
                 <div class="radiobutons">
-                    <label for="">Sexo</label>
-                    <%sexo = cliente.sexo%>
-                        <% if(sexo=='M' ) { %>
-                            M <input type="radio" name="sexo" value="M" checked>
-                            F <input type="radio" name="sexo" value="F" >
-                        <% } else { %>
-                            M <input type="radio" name="sexo" value="M" >
-                            F <input type="radio" name="sexo" value="F" checked>
+                    <p>Sexo</p>
+                    <div class="rb">
+                        <%sexo=cliente.sexo%>
+                            <% if(sexo=='M' ) { %>
+                                <label><input type="radio" name="sexo" value="M" checked>M</label>
+                                <label><input type="radio" name="sexo" value="F">F</label>
+                            <% } else { %>
+                                <label><input type="radio" name="sexo" value="M">M</label>
+                                <label><input type="radio" name="sexo" value="F" checked>F</label>
                         <% } %>
+                    </div>
                 </div>
                 <input type="submit" class="btn-submit" value="Enviar Dados"></input>
                 <a href="/" class="btn-cancel">Cancelar</a>
