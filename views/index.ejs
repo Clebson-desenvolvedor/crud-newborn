@@ -14,8 +14,9 @@
 </head>
 
 <body>
+    <div class="nav"></div>
     <div class="content">
-        <h1>Controle de Clientes Newborn - Alice</h1>
+        <h1><%=title%></h1>
         <nav id="h-menu">
             <ul>
                 <li><a href="/add" class="btn">Novo</a></li>
@@ -29,10 +30,9 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Nome da mamãe</th>
-                        <th>Nome do bebê</th>
-                        <th>Data de nascimento</th>
-                        <th>Sexo</th>
+                        <th>Nome</th>
+                        <th>Whatsapp</th>
+                        <th>Cliente desde</th>
                         <th>Opções</th>
                     </tr>
                 </thead>
@@ -40,24 +40,21 @@
                     <% data.forEach(function(d){ %>
                         <tr>
                             <td>
-                                <%=d.id%>
+                                <%=d.idcliente%>
                             </td>
                             <td>
-                                <%=d.nome_mae%>
+                                <%=d.nome%>
                             </td>
                             <td>
-                                <%=d.nome_bebe%>
+                                <%=d.whatsapp%>
                             </td>
                             <td>
-                                <%=moment(d.data_nasc).format('DD/MM/YYYY')%>
-                            </td>
-                            <td class="sexo">
-                                <%=d.sexo%>
+                                <%=moment(d.clientedesde).format('DD/MM/YYYY')%>
                             </td>
                             <td>
-                                <a href="view/<%=d.id%>" class="btn btn-view"><i class="fas fa-eye"></i> Detalhes</a>
-                                <a href="edit/<%=d.id%>" class="btn btn-edit"><i class="fas fa-edit"></i> Editar</a>
-                                <a href="del/<%=d.id%>" class="btn btn-del"><i class="fas fa-trash-alt"></i> Excluir</a>
+                                <a href="view/<%=d.idcliente%>" class="btn btn-view"><i class="fas fa-eye"></i> Detalhes</a>
+                                <a href="edit/<%=d.idcliente%>" class="btn btn-edit"><i class="fas fa-edit"></i> Editar</a>
+                                <a href="del/<%=d.idcliente%>" class="btn btn-del"><i class="fas fa-trash-alt"></i> Excluir</a>
                             </td>
     
                         </tr>

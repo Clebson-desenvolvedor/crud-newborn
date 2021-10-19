@@ -1,5 +1,10 @@
 body{
     font-family: sans-serif;
+    display: inline-block;
+}
+
+.nav{
+    background-color: #444;
 }
 
 h1{
@@ -67,11 +72,7 @@ h1{
 
 .content-table th,
 .content-table td{
-    padding: 12px 15px;
-}
-
-.sexo{
-    text-align: center;
+    padding: 10px 13px;
 }
 
 .content-table tbody tr{

@@ -4,11 +4,11 @@ const router = express.Router()
 const moment = require('moment')
 
 router.get('/', function (req, res) {
-    let query = `SELECT * FROM clientes limit 10;`
+    let query = `SELECT * FROM tb_clientes limit 10;`
     conn.query(query, function (err, result) {
         if (err) console.log(err)
         res.render('index', {
-            title: 'NewBorn Controle de Clientes',
+            title: 'Sistema de Gerenciamento By Emotion',
             data: result,
             moment: moment
         })
@@ -32,7 +32,7 @@ router.post('/save', function (req, res) {
         req.body.sexo
     ]
 
-    let query = `insert into clientes (nome_mae, sobrenome, whatsapp, nome_bebe, data_nasc, sexo) VALUES (?,?,?,?,?,?);`
+    let query = `insert into tb_clientes (nome, sobrenome, whatsapp, clientedesde) VALUES (?,?,?,?);`
 
     conn.query(query, data, function (err, result) {
         if (err) console.log(err)
@@ -41,8 +41,8 @@ router.post('/save', function (req, res) {
     })
 })
 
-router.get('/del/:id', function(req, res){
-    let query = `delete from clientes where id = ${req.params.id}`
+router.get('/del/:idcliente', function(req, res){
+    let query = `delete from tb_clientes where idcliente = ${req.params.idcliente}`
     conn.query(query, function(err, result) {
         if(err) console.log(err)
         res.redirect('/')
@@ -50,7 +50,7 @@ router.get('/del/:id', function(req, res){
 })
 
 router.get('/edit/:id', function(req, res) {
-    let query = `select * from clientes where id = ${req.params.id}`
+    let query = `select * from tb_clientes where idcliente = ${req.params.id}`
     conn.query(query, function(err, result) {
         if(err) console.log(err)
         res.render('edit', {
@@ -62,10 +62,10 @@ router.get('/edit/:id', function(req, res) {
 })
 
 router.post('/updated', function(req, res) {
-    let data_nasc = moment(req.body.data_nasc, 'DD/MM/YYYY').format('YYYY-MM-DD')
-    let query = `update clientes set nome_mae = '${req.body.nome_mae}', sobrenome = '${req.body.sobrenome}',
-    whatsapp = '${req.body.whatsapp}', nome_bebe = '${req.body.nome_bebe}', data_nasc = '${data_nasc}',
-    sexo = '${req.body.sexo}' where id = ${req.body.id}`
+    let clientedesde = moment(req.body.clientedesde, 'DD/MM/YYYY').format('YYYY-MM-DD')
+    let query = `update tb_clientes set nome = '${req.body.nome}', sobrenome = '${req.body.sobrenome}',
+    whatsapp = '${req.body.whatsapp}', clientedesde = '${clientedesde}'
+    where idcliente = ${req.body.idcliente}`
     conn.query(query, function(err, result) {
         if(err) console.log(err)
         res.redirect('/')
