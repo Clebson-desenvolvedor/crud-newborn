@@ -1,30 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <title>
-        <%=title%>
-    </title>
+    <title><%=title%></title>
 </head>
-
 <body>
-    <div class="nav"></div>
-    <div class="content">
+    <header class="tag">
         <h1><%=title%></h1>
-        <nav id="h-menu">
+         <div id="menu">
             <ul>
                 <li><a href="/add" class="btn">Novo</a></li>
                 <li><a href="/search" class="btn">Pesquisar</a></li>
                 <li><a href="/list-all" class="btn">Listar todos</a></li>
             </ul>
-        </nav>
-        <hr>
+        </div>
+         <hr>
+    </header>
+    <nav class="tag">conteudo que vai no nav</nav>
+    <main class="tag">
         <div class="div-table">
             <table class="content-table">
                 <thead>
@@ -62,7 +59,13 @@
                 </tbody>
             </table>
         </div>
-    </div>
+    </main>
+    <footer class="tag"></footer>
+        
+       
+       
+        
+    
 </body>
     
 </html>

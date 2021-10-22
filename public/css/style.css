@@ -1,10 +1,38 @@
-body{
-    font-family: sans-serif;
-    display: inline-block;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.nav{
-    background-color: #444;
+body {
+    font-family: sans-serif;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 150px 1fr 100px;
+    grid-template-areas:
+        'cabecalho cabecalho'
+        'navegacao conteudo'
+        'rodape rodape' 
+}
+
+header {
+    grid-area: cabecalho;
+    background-color: yellow;
+}
+
+nav {
+    grid-area: navegacao;
+    background-color: orange;
+}
+
+main {
+    grid-area: conteudo;
+    background-color: green;
+}
+
+footer {
+    grid-area: rodape;
+    background-color: blue;
 }
 
 h1{
@@ -21,18 +49,18 @@ h1{
     margin-right: 20px;
 }
 
-#h-menu{
+#menu{
     display: flex;
     justify-content: center;
 }
 
-#h-menu ul{
+#menu ul{
     list-style-type: none;
     padding: 0;
     position: relative;
 }
 
-#h-menu ul li{
+#menu ul li{
     display: inline;
     float: right;
     background-color: #836FFF;
@@ -40,14 +68,14 @@ h1{
     border-radius: 5px
 }
 
-#h-menu ul li a{
+#menu ul li a{
     color: #fff;
     text-decoration: none;
     padding: 12px;
     display: inline-block;
 }
 
-#h-menu ul li a:hover{
+#menu ul li a:hover{
     background-color: #b0a4fb;
     border-radius: 5px;
 }
