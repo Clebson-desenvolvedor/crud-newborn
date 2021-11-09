@@ -7,7 +7,7 @@ body {
     font-family: sans-serif;
     display: grid;
     min-height: 100vh;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 200px 1fr;
     grid-template-rows: 150px 1fr 100px;
     grid-template-areas:
         'cabecalho cabecalho'
@@ -17,22 +17,24 @@ body {
 
 header {
     grid-area: cabecalho;
-    background-color: yellow;
 }
 
 nav {
     grid-area: navegacao;
-    background-color: orange;
 }
 
 main {
     grid-area: conteudo;
-    background-color: green;
 }
 
 footer {
     grid-area: rodape;
-    background-color: blue;
+    text-align: center;
+    bottom: 0;
+}
+
+.p-footer {
+    bottom: 0;
 }
 
 h1{
